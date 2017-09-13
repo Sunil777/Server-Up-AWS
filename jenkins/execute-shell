@@ -1,0 +1,10 @@
+cd ${WORKSPACE}
+mkdir -p group_vars
+cat > group_vars/all.yml <<EOF
+instance_ids: [${INSTANCE_IDS}]
+webserver: ${WEBSERVER}
+region: ${REGION}
+elb_name: ${ELB}
+healthcheck: ${HEALTHCHECK}
+port: ${PORT}
+EOF
